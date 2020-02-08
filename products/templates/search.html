@@ -1,0 +1,34 @@
+{% extends 'index.html' %}
+
+{% block searchmsg %}
+
+
+<div class="card">
+
+        <h2 class="card-header info-color white-text text-center py-4">
+            <strong>..Product List..</strong>
+        </h2>
+    
+        
+        <div class="card-body px-lg-5 pt-0">
+    
+         
+            <form class="text-center" style="color: #757575;" action="confirm/" method="GET">
+    
+                <p style="border: 2px solid red; border-radius: 5px; background-color:#feceea ;">{{message}}-{{name}} </p>
+                {% block ins %}
+
+                  {% endblock %}
+                
+    
+                <button class="btn btn-outline-primary" type="submit">Got It</button>
+    
+            </form>
+      
+    
+        </div>
+    
+    </div>
+
+
+{% endblock %}

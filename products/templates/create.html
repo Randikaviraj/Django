@@ -1,0 +1,85 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Add Product</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link rel="icon" type="image/png" href="images/icons/favicon.ico"/>
+
+	<link rel="stylesheet" type="text/css" href="{% static'vendor/bootstrap/css/bootstrap.min.css'}">
+    <link rel="stylesheet" type="text/css" href="{% static'fonts2/font-awesome-4.7.0/css/font-awesome.min.css'}">
+	<link rel="stylesheet" type="text/css" href="{% static'fonts2/iconic/css/material-design-iconic-font.min.css'}">
+	<link rel="stylesheet" type="text/css" href="{% static 'vendor/animate/animate.css'%}">
+
+	<link rel="stylesheet" type="text/css" href="{% static 'vendor/css-hamburgers/hamburgers.min.css'%}">
+	<link rel="stylesheet" type="text/css" href="{% static 'vendor/animsition/css/animsition.min.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'vendor/select2/select2.min.css' %}">
+
+	<link rel="stylesheet" type="text/css" href="{% static 'vendor/daterangepicker/daterangepicker.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'css2/util.css'%}">
+	<link rel="stylesheet" type="text/css" href="{% static 'css2/main.css' %}">
+</head>
+<body>
+	
+	<div class="limiter">
+		<div class="container-login100" style="background-image: url('https://www.lankapropertyweb.com/property-news/wp-content/uploads/2019/07/image_a3e22d50b1-min.jpg');">
+			<div class="wrap-login100">
+				<form class="login100-form validate-form" method="POST" action="."> {% csrf_token %}
+					<span class="login100-form-logo">
+						<i class="zmdi zmdi-landscape"></i>
+					</span>
+
+					<span class="login100-form-title p-b-34 p-t-27">
+						Add Product
+					</span>
+					<br>
+					<div style="border: 2px solid black; border-radius: 10px; ">
+						<input class="input100" type="text" name="ProductID" placeholder="Product ID">
+						
+					</div>
+					<br>
+					<div style="border: 2px solid black; border-radius: 10px; ">
+						<input class="input100" type="text" name="ProductName" placeholder="Product Name">
+						
+					</div>
+					<br>
+
+					<div style="border: 2px solid black; border-radius: 10px; ">
+						<input class="input100" type="number" name="ProductPrice" placeholder="Product Price">
+						
+					</div>
+					<br>
+				
+
+				
+
+					<div class="container-login100-form-btn">
+						<button class="login100-form-btn">
+							Save
+						</button>
+					</div>
+
+					
+				</form>
+			</div>
+		</div>
+	</div>
+	
+
+	
+	
+
+	<script src="{% static 'vendor/jquery/jquery-3.2.1.min.js' %}"></script>
+	<script src="{% static 'vendor/animsition/js/animsition.min.js' %}"></script>
+	<script src="{% static 'vendor/bootstrap/js/popper.js"' %}></script>
+	<script src="{% static 'vendor/bootstrap/js/bootstrap.min.js' %}"></script>
+	<script src="{% static 'vendor/select2/select2.min.js'%}"></script>
+	<script src="{% static 'vendor/daterangepicker/moment.min.js' %}"></script>
+	<script src="{% static 'vendor/daterangepicker/daterangepicker.js' %}"></script>
+	<script src="{% static 'vendor/countdowntime/countdowntime.js' %}"></script>
+	<script src="{% static 'js2/main.js' %}"></script>
+
+</body>
+</html>

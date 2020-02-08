@@ -1,0 +1,47 @@
+{% extends 'index.html' %}
+
+{% block enterelement %}
+<a href="create/">
+        <button id="add" class="btn btn-outline-success btn-lg ">Add New Product</button>
+</a>
+
+<form action="search/" method="GET">
+  {% csrf_token %}
+
+<input  class="" name="ProductName" type="text" value="" placeholder="Type Product Name to search" />
+<input  class="btn btn-outline-warning btn-lg"  type="submit" value="Search"/>
+</form>
+
+
+{% endblock %}
+
+
+{% block content %}
+<table class="table table-striped table-dark">
+        <thead>
+          <tr>
+            <th scope="col">#Id</th>
+            <th scope="col">Product Name</th>
+            <th scope="col">Prize</th>
+          </tr>
+        </thead>
+        <tbody>
+            {% for product in products%}
+          <tr>
+            <th scope="row">{{product.product_id}}</th>
+            <td>{{product.product_name}}</td>
+            <td>{{product.product_price}}</td>
+            <td>
+                <form action="delete/{{product.product_id}}/" method="POST">
+                    {% csrf_token %}
+  
+                  <input  class="btn btn-default btn-danger" name="{{product.product_id}}" type="submit" value="Delete"/>
+                  
+                </form>
+                
+            </td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+{% endblock %}
